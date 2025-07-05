@@ -878,11 +878,35 @@ MonoBehaviour:
     m_ActionId: 31235c64-1fbb-4d0a-9362-7552bfd2b011
     m_ActionName: BaseAction/Move[/Keyboard/z,/Keyboard/s,/Keyboard/q,/Keyboard/d]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 638550338218421603}
+        m_TargetAssemblyTypeName: BaseController, Assembly-CSharp
+        m_MethodName: Interract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f308987d-32c6-40ff-801e-49e02403dc57
     m_ActionName: BaseAction/Interact[/Keyboard/e]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 638550338218421603}
+        m_TargetAssemblyTypeName: BaseController, Assembly-CSharp
+        m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 479ff141-d1dd-49d6-8e45-83284a3ffcd4
     m_ActionName: BaseAction/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
@@ -918,7 +942,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InteractCollider: {fileID: 638550337216036327}
   MoveSpeed: 10
-  Gravity: -9.81
+  JumpForce: 150
+  Gravity: 9.81
   OnMoveInputPerformed:
     m_PersistentCalls:
       m_Calls: []
