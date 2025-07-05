@@ -6,10 +6,9 @@ using UnityEngine.Events;
 public class InteractColider : MonoBehaviour
 {
     private Collider coll;
-    InteractableObject currentInteract; 
+    InteractableObject currentInteract;
 
-    public UnityEvent OnInteractableEntered; 
-    public UnityEvent OnInteractableExit; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +18,20 @@ public class InteractColider : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         currentInteract = other.gameObject.GetComponent<InteractableObject>();
-        if (currentInteract != null)
-        {
-            OnInteractableEntered.Invoke();
-        }
+
     }
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject == currentInteract.gameObject)
         {
             currentInteract = null;
-            OnInteractableExit.Invoke();
         }
+    }
+    public void PerformInteract()
+    {
+        if (!currentInteract) { return; }
+       //a changer quadn on aura les meshes
+        currentInteract.gameObject.transform.parent=transform; 
+
     }
 }
