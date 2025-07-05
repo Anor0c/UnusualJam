@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 1, z: -4}
+  m_FollowOffset: {x: 0, y: 1, z: -2}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 1, z: -4}
+  m_FollowOffset: {x: 0, y: 1, z: -2}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -248,7 +248,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889790528}
-  m_LocalRotation: {x: 0.12218326, y: -0, z: -0, w: 0.9925076}
+  m_LocalRotation: {x: 0.22975293, y: -0, z: -0, w: 0.973249}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 1, z: -4}
+  m_FollowOffset: {x: 0, y: 1, z: -2}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -438,7 +438,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499473047}
-  m_LocalRotation: {x: 0.12218326, y: -0, z: -0, w: 0.9925076}
+  m_LocalRotation: {x: 0.22975293, y: -0, z: -0, w: 0.973249}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -516,7 +516,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731419670}
-  m_LocalRotation: {x: 0.12218326, y: -0, z: -0, w: 0.9925076}
+  m_LocalRotation: {x: 0.22975293, y: -0, z: -0, w: 0.973249}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -581,6 +581,7 @@ GameObject:
   - component: {fileID: 1980376889}
   - component: {fileID: 1980376891}
   - component: {fileID: 1980376890}
+  - component: {fileID: 537008237}
   m_Layer: 0
   m_Name: CM FreeLook1
   m_TagString: Untagged
@@ -596,7 +597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980376888}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -4}
+  m_LocalPosition: {x: 0, y: 0.99999994, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -671,7 +672,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 100
+    m_MaxSpeed: 0
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -700,11 +701,11 @@ MonoBehaviour:
   m_SplineCurvature: 0.2
   m_Orbits:
   - m_Height: 2.5
-    m_Radius: 1.75
-  - m_Height: 1
-    m_Radius: 4
-  - m_Height: -0.8
     m_Radius: 1
+  - m_Height: 1
+    m_Radius: 2
+  - m_Height: -0.8
+    m_Radius: 0.75
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 1731419672}
@@ -726,6 +727,66 @@ MonoBehaviour:
   AutoEnableInputs: 1
   XYAxis: {fileID: -5630151704836100654, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   ZAxis: {fileID: 0}
+--- !u!114 &537008237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980376888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd438dd108a0f284aa931a2da434f1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 2
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 0.2
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -1, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_UseImpactDirection: 0
+  m_ScaleImpactWithMass: 0
+  m_ScaleImpactWithSpeed: 0
 --- !u!1 &638550337216036326
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,7 +832,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &638550337216036324
 MonoBehaviour:
@@ -909,6 +970,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 479ff141-d1dd-49d6-8e45-83284a3ffcd4
     m_ActionName: BaseAction/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 638550338218421603}
+        m_TargetAssemblyTypeName: BaseController, Assembly-CSharp
+        m_MethodName: Look
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 05766e58-3882-4824-b977-d6db96a0e912
+    m_ActionName: BaseAction/Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: BaseAction
@@ -924,8 +1001,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.3
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &638550338218421603
@@ -941,9 +1018,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractCollider: {fileID: 638550337216036327}
-  MoveSpeed: 10
-  JumpForce: 150
-  Gravity: 9.81
+  MaxLookSpeed: 10
+  MoveSpeed: 2
+  JumpForce: 10
+  Gravity: 2.4525
   OnMoveInputPerformed:
     m_PersistentCalls:
       m_Calls: []
@@ -961,8 +1039,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -995,8 +1073,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638550338335496447}
-  m_LocalRotation: {x: 0.12218326, y: -0, z: -0, w: 0.9925076}
-  m_LocalPosition: {x: 0, y: 1, z: -4}
+  m_LocalRotation: {x: 0.22975293, y: -0, z: -0, w: 0.973249}
+  m_LocalPosition: {x: 0, y: 0.99999994, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1148,7 +1226,7 @@ Transform:
   m_GameObject: {fileID: 638550338703888665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 638550338218421631}

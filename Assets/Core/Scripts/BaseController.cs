@@ -19,8 +19,13 @@ public class BaseController : MonoBehaviour
     private CharacterController character;
     [SerializeField] private Collider InteractCollider;
 
+    [Header("Look")]
+    private Vector2 lookInput;
+    [SerializeField] private float MaxLookSpeed = 10f; 
+
     [Header("HorizontalMovement")]
     private Vector2 moveInput = Vector2.zero;
+    private Vector3 moveInputDirection = Vector3.zero;
     private Vector3 moveDirection = Vector3.zero;
     [SerializeField] private float MoveSpeed = 1.0f;
 
@@ -46,10 +51,12 @@ public class BaseController : MonoBehaviour
         if (!_ctx.performed)
         {
             moveInput = Vector2.zero;
+            moveInputDirection = Vector3.zero;
         }
         else
         {
             moveInput = _ctx.ReadValue<Vector2>().normalized;
+
             OnMoveInputPerformed.Invoke(moveInput);
         }
     }
@@ -70,7 +77,7 @@ public class BaseController : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (Physics.Raycast(transform.position, Vector3.down, out isGrounded, 1.1f))
+        if (Physics.Raycast(transform.position, Vector3.down, out isGrounded, 1.05f))
         {
             if (isJumping)
             {
@@ -85,9 +92,19 @@ public class BaseController : MonoBehaviour
         {
             CurrentVerticalSpeed -= Gravity;
         }
-
-        moveDirection = new Vector3(moveInput.x * MoveSpeed, CurrentVerticalSpeed, moveInput.y * MoveSpeed) * Time.deltaTime;
+        moveInputDirection = moveInput.x * transform.right + moveInput.y * transform.forward;
+        moveDirection = new Vector3 (moveInputDirection.x *  MoveSpeed, CurrentVerticalSpeed,  moveInputDirection.z* MoveSpeed) * Time.deltaTime;
         character.Move(moveDirection);
+    }
+    #endregion
+    #region "Look"
+    public void Look(InputAction.CallbackContext _ctx)
+    {
+        if (_ctx.performed) 
+        {
+            lookInput=_ctx.ReadValue<Vector2>();
+        }
+        transform.eulerAngles += new Vector3(0f, Mathf.Clamp( lookInput.x, -MaxLookSpeed, MaxLookSpeed ), 0f);
     }
     #endregion
     #region "Interaction"
