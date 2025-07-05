@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f5953d2012ed72b4a8b7e4827c77c106
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - This Cafe
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 13cbd6d08f4a10e41baedb9b6de16047, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
